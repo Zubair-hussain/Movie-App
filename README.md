@@ -1,51 +1,84 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Movie App
 
-## Get started
+A brief description of what this project does and who it's for
+Movie App Description
+ Overview:
+The Movie App is a full-featured mobile application that allows users to:
+•	Browse popular movies using the TMDb API.
+•	Search movies dynamically.
+•	View detailed information about any movie (poster, rating, genres, YouTube trailer).
+•	Register and log in using Firebase Authentication.
+•	Experience modern animations, dark mode UI, and responsive layouts.
+________________________________________
+Tech Stack:
+•	Frontend: React Native (via Expo)
+•	Navigation: Expo Router (expo-router)
+•	Authentication: Firebase Auth
+•	API Integration: The Movie Database (TMDb)
+•	State Management: React Hooks (useState, useEffect)
+•	Styling: React Native StyleSheet
+•	Platform: Android/iOS with Expo Go
+________________________________________
+Authentication Features:
+•	Firebase-backed Sign Up and Login forms.
+•	Real-time auth state listener via onAuthStateChanged.
+•	Protected routes with automatic redirect based on auth status.
+•	Auth flow built using expo-router's Stack navigation.
+________________________________________
+Movie Features:
+•	Grid-based movie thumbnails (2 per row), optimized for different screen sizes.
+•	Each movie card is clickable and navigates to a Movie Details screen.
+•	Movie Detail Page includes:
+o	Poster
+o	Title
+o	Overview
+o	IMDB rating
+o	Genres
+o	Runtime
+o	YouTube Trailer (linked)
+o	Similar movies (optional)
+________________________________________
+Search Feature:
+•	Smart search bar on the Home page filters movies by title.
+•	Integrated with TMDb’s search API for real-time results.
+________________________________________
+UI Features:
+•	Modern dark mode layout for Movie Details.
+•	Animations during loading, app startup, and screen transitions.
+•	Pull-to-refresh FlatList on the Home page to reload movie data.
+•	Responsive design ensuring no thumbnail overlaps or clipping.
+________________________________________
 
-1. Install dependencies
+**** Folder Structure:
+/app
+│ _layout.jsx --> Navigation setup
+│ index.jsx --> Home screen with movie grid & search
+│
+├── auth/
+│ ├── Login.jsx --> Firebase login screen
+│ └── Register.jsx --> Firebase registration screen
+│
+├── movie/
+│ └── [id].jsx --> Movie Detail screen with description & trailer
+│
+/components
+│ ├── MovieCard.jsx --> Grid display of movie posters
+│ └── SearchBar.jsx --> Dynamic search input
+│
+/constants
+│ └── tmdb.js --> API methods for TMDb
+│
+/firebase
+│ └── firebaseConfig.js --> Firebase SDK config
+________________________________________
 
-   ```bash
-   npm install
-   ```
+**** 
+Status:
+Authentication working
+Movie API integration working
+Responsive layout
+Navigation between Home ↔ Logm in/Register ↔ Movie Details
+Final tweaks: Add logout, animations, error handling, offline caching (optional)
 
-2. Start the app
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-"# Movie-App" 
